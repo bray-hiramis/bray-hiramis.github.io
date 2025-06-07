@@ -1,0 +1,74 @@
+@use 'variables';
+
+.container {
+    max-width: 1200px;
+    padding: 0 variables.$padding-md;
+    margin: 0 auto;
+}
+
+@mixin btn {
+    display: inline-block;
+    padding: variables.$padding-sm variables.$padding-lg;
+    border: 1.5px solid variables.$text-color;
+    border-radius: variables.$border-radius-sm;
+    margin: variables.$margin-md 0;
+    font-weight: 600;
+    margin-right: variables.$margin-sm;
+}
+
+.btn-primary {
+    @include btn;
+    background-color: variables.$accent-color;
+}
+
+.btn-secondary {
+    @include btn;
+    transition: all 0.1s ease-in-out;
+
+    &:hover {
+        background-color: variables.$accent-color;
+    }
+}
+
+.primary-color {
+    font-size: calc(variables.$font-size * 1.6);
+    color: variables.$accent-color;
+}
+
+.web-icon {
+    max-width: calc(variables.$font-size * 3.5);
+    display: inline-block;
+    margin-top: variables.$margin-sm;
+    margin-right: calc(variables.$margin-sm * 2);
+}
+
+.view-more {
+    cursor: pointer;
+    margin: 0 auto;
+    display: block;
+}
+
+.show {
+    display: block;
+}
+
+.hidden-content {
+    display: none !important;
+}
+
+// Mobile menu: Burger menu button
+.mobile-menu {
+    cursor: pointer;
+    max-width: 40px;
+    display: inline-block;
+}
+
+.show-mobile {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.hidden-content-mobile {
+    display: none;
+}

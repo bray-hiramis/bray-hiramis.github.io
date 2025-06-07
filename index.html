@@ -3,64 +3,158 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-
-        h2 {
-            color: aqua;
-        }
-
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./src/css/styles.css">
+    <link rel="stylesheet" href="./src/css/mobile.css">
+    <title>Batch 18 | Portfolio</title>
 </head>
 <body>
 
-    <div>
-        <span title="hello" id="hi" data-test="This is a test" data-longer-name="this is a longer name">hello</span>
-        <span id="bye">world</span>
+    <div class="container">
+        <!-- Header -->
+        <header id="home">
+            <div class="logo">Bray Hiramis</div>
+            <nav id="main-nav">
+                <div class="mobile-menu burger hidden-content-mobile">
+                    <img src="./src/assets/img/web icons/hamburger-menu-svgrepo-com.svg" alt="More Menu">
+                </div>
+                <div class="mobile-menu close-burger hidden-content-mobile">
+                    <img src="./src/assets/img/web icons/close-bold-svgrepo-com.svg" alt="More Menu">
+                </div>
+                <ul>
+                    <li><a class="nav-list" href="#about">About</a></li>
+                    <li><a class="nav-list" href="#projects">Projects & Certificate</a></li>
+                    <li><a class="nav-list" href="#contacts">Contacts</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <!-- hero section -->
+        <div id="about" class="hero">
+            <div class="hero-text">
+                <p><span class="primary-color">Web Developer</span></p>
+                <h1>Hello, my name is Bray Hiramis</h1>
+                <p>I'm a passionate learner on my journey to becoming a web developer. Excited to build, create, and bring ideas to life
+                using HTML, CSS, and JavaScript. Focused on mastering full-stack development to build accessible and responsive
+                websites. Eager to grow and contribute!</p>
+                <a href="#projects" class="btn-primary">Projects</a>
+                <a href="https://www.linkedin.com/in/john-brian-hiramis/" class="btn-secondary" target="_blank">LinkedIn</a>
+                <div class="skills">
+                    <h2>My Skills</h2>
+                    <img src="./src/assets/img/web icons/html-5-svgrepo-com.png" alt="html" class="web-icon">
+                    <img src="./src/assets/img/web icons/css-3-svgrepo-com.svg" alt="html" class="web-icon">
+                    <img src="./src/assets/img/web icons/sass-svgrepo-com.svg" alt="html" class="web-icon">
+                    <img src="./src/assets/img/web icons/javascript-svgrepo-com.svg" alt="html" class="web-icon">
+                    <img src="./src/assets/img/web icons/git-svgrepo-com.svg" alt="html" class="web-icon">
+                    <img src="./src/assets/img/web icons/github-142-svgrepo-com.svg" alt="html" class="web-icon">
+                </div>
+            </div>
+            <div class="hero-img">
+                <img src="./src/assets/img/myimage.png" alt="John Doe" loading="lazy">
+            </div>
+        </div>
+        
+        <!-- project section -->
+        <main id="projects">
+            <h2>Projects</h2>
+            <section class="prj-content">
+                <div class="prj-box prj-1">
+                    <div class="prj-description">
+                            <h3>My Portfolio V.1</h3>
+                            <p>
+                                This is a simple, single-page personal portfolio website built as a learning project. The primary goal was to reinforce
+                                fundamental HTML and CSS concepts, with a strong focus on implementing Responsive Design using CSS Flexbox and Media
+                                Queries.
+                            </p>
+                            <a href="https://github.com/bray-hiramis/bray-hiramis-portfolio-v1" target="_blank" class="btn-secondary"><img src="./src/assets/img/web icons/github-142-svgrepo-com.svg" alt="View in Github." class="inline-img">View in Github</a>
+                            <a href="https://bray-hiramis.github.io/bray-hiramis-portfolio-v1/" target="_blank" class="btn-secondary"><img src="./src/assets/img/web icons/live-fill-svgrepo-com.svg" alt="View in Github." class="inline-img">View Live</a>
+                    </div>
+                    <div class="prj-img">
+                        <img src="./src/assets/img/projects img/my-portfolio-v1.png" alt="">
+                    </div>
+                </div>
+                <div class="prj-box prj-2 hidden-content">
+                    <div class="prj-description">
+                        <h3>Aquaflow</h3>
+                        <p>
+                            This project is part of the CSS Grid Lab Assignment in the freeCodeCamp Responsive Web Design Certification. It
+                            showcases a responsive product landing page for the fictional AquaFlow Smart Hydration Bottle.
+                        </p>
+                        <a href="https://github.com/bray-hiramis/lab-product-landing-page" target="_blank" class="btn-secondary"><img
+                                src="./src/assets/img/web icons/github-142-svgrepo-com.svg" alt="View in Github."
+                                class="inline-img">View in Github</a>
+                        <a href="https://bray-hiramis.github.io/lab-product-landing-page/" target="_blank" class="btn-secondary"><img
+                                src="./src/assets/img/web icons/live-fill-svgrepo-com.svg" alt="View in Github." class="inline-img">View
+                            Live</a>
+                    </div>
+                    <div class="prj-img">
+                        <img src="./src/assets/img/projects img/Aquaflow.png" alt="">
+                    </div>
+                </div>
+                <div class="prj-box prj-3 hidden-content">
+                    <div class="prj-description">
+                        <h3>AeroSwift X1</h3>
+                        <p>
+                            Drone for Sale Landing Page 🚁 This is a simple responsive landing page for a fictional drone called AeroSwift X1. It
+                            was created as a front-end mini project to practice and apply basic HTML and CSS skills.
+                        </p>
+                        <a href="https://github.com/bray-hiramis/project-AeroSwift-Drone-for-sale" target="_blank" class="btn-secondary"><img
+                                src="./src/assets/img/web icons/github-142-svgrepo-com.svg" alt="View in Github."
+                                class="inline-img">View in Github</a>
+                        <a href="https://bray-hiramis.github.io/project-AeroSwift-Drone-for-sale/" target="_blank" class="btn-secondary"><img
+                                src="./src/assets/img/web icons/live-fill-svgrepo-com.svg" alt="View in Github." class="inline-img">View
+                            Live</a>
+                    </div>
+                    <div class="prj-img">
+                        <img src="./src/assets/img/projects img/AeroSwift.png" alt="">
+                    </div>
+                </div>
+            </section>
+            <section class="certificate hidden-content">
+                <h2>Certificates</h2>
+                <div class="cert-content">
+                    <div class="cert-box">
+                        <div class="cert-description">
+                            <h3><a href="https://www.freecodecamp.org/certification/brayhiramis/responsive-web-design" target="_blank">Responsive Web Design</a></h3>
+                            <p>freeCodeCamp</p>
+                            <p>Issued May 2025</p>
+                            <p>Credential ID: brayhiramis-rwd</p>
+                        </div>
+                        <div class="cert-img">
+                            <img src="./src/assets/img/projects img/Responsive Web Design Certificate (freeCodeCamp).png" alt="Responsive web design certificate from freecodecamp.">
+                        </div>
+                    </div>
+                    <div class="cert-box">
+                        <div class="cert-description">
+                            <h3><a href="https://www.credly.com/badges/f720b4bc-eec9-435f-91a6-4e96b5d6e45c/linked_in_profile"
+                                    target="_blank">Google IT Support Professional Certificate (v2)</a></h3>
+                            <p>Coursera</p>
+                            <p>Issued August 2024</p>
+                        </div>
+                        <div class="cert-img">
+                            <img src="./src/assets/img/projects img/Google IT Support Professional Certificate.png"
+                                alt="Responsive web design certificate from freecodecamp.">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <button class="btn-secondary view-more show">View More</button>
+        </main>
+
+        <footer id="contacts">
+            <a href="https://github.com/bray-hiramis" target="_blank"><img src="./src/assets/img/web icons/github-142-svgrepo-com.svg" alt="email"></a>
+            <a href="https://www.linkedin.com/in/john-brian-hiramis/" target="_blank"><img src="./src/assets/img/web icons/linkedin-rounded-svgrepo-com.svg" alt="linkedIn"></a>
+            <a href="mailto:johnbrianhiramis@gmail.com" target="_blank"><img src="./src/assets/img/web icons/email-14-svgrepo-com.svg" alt="email"></a>
+            <p>Made with ❤️ | Bray Hiramis &copy; 2025</p>
+        </footer>
     </div>
-    
-    <p>Hello <strong>Web Developer</strong>, Welcome to <em>Web Dev</em> 101.</p>
 
-    <h1>This is <span style="color: tomato;">heading 1</span></h1>
-    <h2>This is heading 2</h2>
-    <h3>This is heading 3</h3>
-    <h4>This is heading 4</h4>
-    <h5>This is heading 5</h5>
-    <h6>This is heading 6</h6>
-
-    <hr>
-
-    <div>This is a container</div>
-    <p>This is a <br> paragraph</p>
-
-    <ul>
-        <li>Recipe 1</li>
-        <li>Recipe 2</li>
-        <li>Recipe 3</li>
-    </ul>
-
-    <a href="https://www.google.com" target="_blank" style="display: block;">Click me boy!</a>
-
-
-    <table>
-        <thead>
-            <th>
-                <tr>
-                    <th>Head 1</th>
-                    <th>Head 2</th>
-                    <th>Head 3</th>
-                </tr>
-            </th>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Body 1</td>
-                <td>Body 2</td>
-                <td>Body 3</td>
-            </tr>
-        </tbody>
-    </table>
-
-    <script src="./assets/script/script.js"></script>
+    <script src="./src/js/script.js"></script>
 </body>
 </html>

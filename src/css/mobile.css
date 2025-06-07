@@ -1,0 +1,66 @@
+@media screen and (max-width: 992px) {
+  body {
+    padding: 20px 0;
+  }
+  #home {
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
+  #home #main-nav ul {
+    flex-direction: column;
+    text-align: center;
+    height: auto;
+  }
+  #home #main-nav ul li {
+    padding: 20px 0;
+  }
+  #home #main-nav ul li .nav-list {
+    width: 100%;
+  }
+  .hero {
+    height: auto;
+    max-width: 100%;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 0 16px;
+  }
+  .hero .hero-text {
+    max-width: 100%;
+    height: auto;
+  }
+  .hero .hero-img {
+    align-self: center;
+  }
+}
+@media screen and (max-width: 576px) {
+  .hero .hero-text h1 {
+    font-size: 28.8px;
+  }
+  .hero .btn-primary {
+    width: 100%;
+    margin: 10px 0;
+  }
+  .hero .btn-secondary {
+    width: 100%;
+    margin: 10px 0;
+  }
+  .hero .skills h2 {
+    text-align: center;
+  }
+  #projects .prj-content .prj-box {
+    text-align: center;
+    height: 100%;
+    flex-direction: column;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  }
+  #projects .prj-content .prj-box:nth-child(2) {
+    flex-direction: column;
+  }
+  #projects .prj-content .prj-box:nth-child(2) .prj-description {
+    text-align: center;
+  }
+}
+
+/*# sourceMappingURL=mobile.css.map */
