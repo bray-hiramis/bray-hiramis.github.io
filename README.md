@@ -28,7 +28,3 @@ Check out the live demo of the website: https://bray-hiramis.github.io/
 ## Author
 
 * **Bray Hiramis** - [GitHub Profile](https://github.com/bray-hiramis) | [LinkedIn Profile](https://www.linkedin.com/in/john-brian-hiramis/)
-
-## Live
-
-https://bray-hiramis.github.io/
