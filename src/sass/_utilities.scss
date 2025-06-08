@@ -24,10 +24,6 @@
 .btn-secondary {
     @include btn;
     transition: all 0.1s ease-in-out;
-
-    &:hover {
-        background-color: variables.$accent-color;
-    }
 }
 
 .primary-color {
@@ -54,21 +50,4 @@
 
 .hidden-content {
     display: none !important;
-}
-
-// Mobile menu: Burger menu button
-.mobile-menu {
-    cursor: pointer;
-    max-width: 40px;
-    display: inline-block;
-}
-
-.show-mobile {
-    position: absolute;
-    top: 0;
-    right: 0;
-}
-
-.hidden-content-mobile {
-    display: none;
 }

@@ -10,6 +10,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./src/css/styles.css">
     <link rel="stylesheet" href="./src/css/mobile.css">
     <title>Bray Hiramis | Portfolio</title>
@@ -19,20 +22,22 @@
     <div class="container">
         <!-- Header -->
         <header id="home">
+            <!-- logo -->
             <div class="logo">Bray Hiramis</div>
+
+            <!-- navigation bar -->
             <nav id="main-nav">
-                <div class="mobile-menu burger hidden-content-mobile">
-                    <img src="./src/assets/img/web icons/hamburger-menu-svgrepo-com.svg" alt="More Menu">
+                <div class="mobile-menu" onclick="toggleMenu()">
+                    <img class="hamburger" src="./src/assets/img/web icons/hamburger-menu-svgrepo-com.svg" alt="More Menu">
+                    <img class="close" src="./src/assets/img/web icons/close-bold-svgrepo-com.svg" alt="Close Menu" style="display: none;">
                 </div>
-                <div class="mobile-menu close-burger hidden-content-mobile">
-                    <img src="./src/assets/img/web icons/close-bold-svgrepo-com.svg" alt="More Menu">
-                </div>
-                <ul>
-                    <li><a class="nav-list" href="#about">About</a></li>
-                    <li><a class="nav-list" href="#projects">Projects & Certificate</a></li>
-                    <li><a class="nav-list" href="#contacts">Contacts</a></li>
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects & Certificate</a></li>
+                    <li><a href="#contacts">Contacts</a></li>
                 </ul>
             </nav>
+
         </header>
         
         <!-- hero section -->
@@ -47,12 +52,14 @@
                 <a href="https://www.linkedin.com/in/john-brian-hiramis/" class="btn-secondary" target="_blank">LinkedIn</a>
                 <div class="skills">
                     <h2>My Skills</h2>
-                    <img src="./src/assets/img/web icons/html-5-svgrepo-com.png" alt="html" class="web-icon">
-                    <img src="./src/assets/img/web icons/css-3-svgrepo-com.svg" alt="html" class="web-icon">
-                    <img src="./src/assets/img/web icons/sass-svgrepo-com.svg" alt="html" class="web-icon">
-                    <img src="./src/assets/img/web icons/javascript-svgrepo-com.svg" alt="html" class="web-icon">
-                    <img src="./src/assets/img/web icons/git-svgrepo-com.svg" alt="html" class="web-icon">
-                    <img src="./src/assets/img/web icons/github-142-svgrepo-com.svg" alt="html" class="web-icon">
+                    <div class="skills-icons">
+                        <img src="./src/assets/img/web icons/html-5-svgrepo-com.png" alt="html" class="web-icon">
+                        <img src="./src/assets/img/web icons/css-3-svgrepo-com.svg" alt="html" class="web-icon">
+                        <img src="./src/assets/img/web icons/sass-svgrepo-com.svg" alt="html" class="web-icon">
+                        <img src="./src/assets/img/web icons/javascript-svgrepo-com.svg" alt="html" class="web-icon">
+                        <img src="./src/assets/img/web icons/git-svgrepo-com.svg" alt="html" class="web-icon">
+                        <img src="./src/assets/img/web icons/github-142-svgrepo-com.svg" alt="html" class="web-icon">
+                    </div>
                 </div>
             </div>
             <div class="hero-img">

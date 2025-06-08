@@ -4,25 +4,6 @@
     body {
         padding: 20px 0;
     }
-    #home {
-            flex-direction: column;
-            align-items: center;
-            padding: 0;
-
-            #main-nav {
-                ul {
-                    flex-direction: column;
-                    text-align: center;
-                    height: auto;
-                    li {
-                        padding: 20px 0;
-                        .nav-list {
-                                width: 100%;
-                            }
-                        }
-                        }
-            }
-        }
 
     .hero {
         height: auto;
@@ -44,53 +25,87 @@
 }
 
 @media screen and (max-width: 768px) {
-
-}
-
-@media screen and (max-width: 576px) {
-    .hero {
-        .hero-text {  
-            h1 {
-                font-size: variables.$font-size * 1.8;
+    #home {
+        #main-nav {
+            .mobile-menu {
+                display: block;
+                .close,
+                .hamburger {
+                    width: 30px;
+                    height: 30px;
+                }
             }
-        }
+    
+            .nav-links {
+                display: none !important;
 
-        .btn {
-            &-primary {
-                width: 100%;
-                margin: 10px 0;
-            }
-            &-secondary {
-                width: 100%;
-                margin: 10px 0;
-            }
-        }
-
-        .skills {
-            h2 {
-                text-align: center;
-            }
+                li {
+                    padding: 20px;
+                }
+    
+                &.active {
+                    display: block !important;
+                    position: absolute;
+                    top: 90px;
+                    left: 0;
+                    width: 100%;
+                    text-align: center;
+                    max-height: none;
+                    overflow: hidden;
+                    background-color: variables.$accent-color;
+                }
+            }   
         }
     }
 
-    #projects {
-        .prj-content {
-
-            .prj-box {
-                text-align: center;
-                height: 100%;
-                flex-direction: column;
-                box-shadow: variables.$box-shadow-lg;
-
-                &:nth-child(2) {
+    .hero {
+            .hero-text {
+                h1 {
+                    font-size: variables.$font-size * 1.8;
+                }
+            }
+    
+            .btn {
+                &-primary {
+                    width: 100%;
+                    margin: 10px 0;
+                }
+    
+                &-secondary {
+                    width: 100%;
+                    margin: 10px 0;
+                }
+            }
+    
+            .skills {
+                h2 {
+                    text-align: center;
+                }
+            }
+        }
+    
+        #projects {
+            .prj-content {
+    
+                .prj-box {
+                    text-align: center;
+                    height: 100%;
                     flex-direction: column;
-
-                    .prj-description {
-                        text-align: center;
+                    box-shadow: variables.$box-shadow-lg;
+    
+                    &:nth-child(2) {
+                        flex-direction: column;
+    
+                        .prj-description {
+                            text-align: center;
+                        }
                     }
                 }
             }
-        }   
-    }
+        }
+}
+
+@media screen and (max-width: 576px) {
+
     
 }

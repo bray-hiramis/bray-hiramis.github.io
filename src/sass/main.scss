@@ -2,7 +2,6 @@
 @use 'utilities';
 
 // reset
-
 * {
     margin: 0;
     padding: 0;
@@ -42,25 +41,37 @@ img {
 #home {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
     padding: variables.$padding-md 0;
-    position: relative;
-    top: 0;
-    left: 0;
 
-    #main-nav ul {
-        display: flex;
+    .logo {
+        font-family: "Oswald", sans-serif;
+        font-size: calc(variables.$font-size * 2);
+    }
 
-        .nav-list {
-            padding: variables.$padding-sm variables.$padding-lg;
-            transition: all 1s ease-in-out;
+    #main-nav {
+        .mobile-menu {
+            display: none;
+        }
 
-            &:hover {
-                border-bottom: 2px solid variables.$accent-color;
+        .nav-links {
+            display: flex;
+            /* position: static; */
+            a {
+                padding: variables.$padding-md variables.$padding-lg;
             }
+
+            /* &.active {
+                display: flex;
+            } */
         }
     }
 }
+
+/* .nav-links.active {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+} */
 
 // hero
 .hero {
@@ -88,7 +99,14 @@ img {
             max-height: auto;
             border-radius: 50%;
             overflow: hidden;
-        }
+    }
+
+    .skills-icons {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
 }
 
 // projects

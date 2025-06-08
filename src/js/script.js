@@ -13,53 +13,49 @@ viewMore.addEventListener("click", function() {
             viewMore.textContent = "View More";
         }
     }
-})
+});
 
+// HAMBURGER MENU CODE
+const hamburger = document.querySelector('.hamburger');
+const close = document.querySelector('.close');
+const navLinks = document.querySelector('.nav-links');
 
-const burgerMenu = document.querySelector('.burger');
-const closeBurgerMenu = document.querySelector('.close-burger');
-const navList = document.querySelectorAll('.nav-list');
-
-// Show and hide burger menu when reached 992px
-window.addEventListener('resize', function() {
-    if (window.innerWidth <= 992) {
-        burgerMenu.classList.remove('hidden-content-mobile'); // show burger menu
-        burgerMenu.classList.add('show-mobile'); // add show class
-        closeBurgerMenu.classList.add('hidden-content-mobile');
-        for (let nav of navList) {
-            nav.classList.add('hidden-content-mobile'); // hide navigation items
-        }
-    } else {
-        burgerMenu.classList.add('hidden-content-mobile'); // hide burger menu
-        burgerMenu.classList.remove('show-mobile'); // remove show class
-        for (let nav of navList) {
-            nav.classList.remove('hidden-content-mobile'); // show navigation items
-        }
+// CHECKING THE LOAD STATE
+this.window.addEventListener('load', function() {
+    if (this.window.innerWidth < 768) {
+        navLinks.classList.add('active');
     }
 });
 
-// To show the Navigation list and the close image
-burgerMenu.addEventListener('click', function() {
-    for (let nav of navList) {
-        if (nav.classList.contains('hidden-content-mobile')) {
-            nav.classList.remove('hidden-content-mobile');
-            burgerMenu.classList.remove('show-mobile');
-            burgerMenu.classList.add('hidden-content-mobile');
-            closeBurgerMenu.classList.remove('hidden-content-mobile');
-            closeBurgerMenu.classList.add('show-mobile');
-        }
+// HANDLE WINDOW RESIZE STATE
+this.window.addEventListener('resize', function() {
+    if (this.window.innerWidth < 768) {
+        hamburger.style.display = 'block';
+        close.style.display = 'none';
     }
-})
+    else if (!navLinks.classList.contains('active')) {
+        hamburger.style.display = 'none';
+        close.style.display = 'block';
+    }
+});
 
-// To hide the Navigation list and the close image / back to the menu burger image
-closeBurgerMenu.addEventListener('click', function() {
-    for (let nav of navList) {
-        if (!nav.classList.contains('hidden-content-mobile')) {
-            nav.classList.add('hidden-content-mobile');
-            closeBurgerMenu.classList.remove('show-mobile');
-            closeBurgerMenu.classList.add('hidden-content-mobile');
-            burgerMenu.classList.remove('hidden-content-mobile');
-            burgerMenu.classList.add('show-mobile');
-        }
+// HAMBURGER STATE
+function toggleMenu() {
+    navLinks.classList.toggle('active');
+    if (navLinks.classList.contains('active')) {
+        hamburger.style.display = 'none';
+        close.style.display = 'block';
+    } else {
+        hamburger.style.display = 'block';
+        close.style.display = 'none';
     }
-})
+};
+
+// TAP ON SCREEN TO HIDE NAVIGATION ON MOBILE
+this.window.addEventListener('scroll', function() {
+    if (navLinks.classList.contains('active')) {
+        navLinks.classList.remove('active');
+        hamburger.style.display = 'block';
+        close.style.display = 'none';
+    }
+});
