@@ -13,6 +13,13 @@
   font-weight: 600;
   margin-right: 8px;
   background-color: #FF9900;
+  transition: all 0.3s ease-in;
+}
+.btn-primary:hover {
+  background-color: #ffbb00;
+}
+.btn-primary:active {
+  transform: scale(0.9);
 }
 
 .btn-secondary {
@@ -24,6 +31,12 @@
   font-weight: 600;
   margin-right: 8px;
   transition: all 0.1s ease-in-out;
+}
+.btn-secondary:hover {
+  background-color: #e2e2e2;
+}
+.btn-secondary:active {
+  transform: scale(0.9);
 }
 
 .primary-color {
@@ -98,20 +111,15 @@ img {
 }
 #home #main-nav .nav-links {
   display: flex;
-  /* position: static; */
-  /* &.active {
-      display: flex;
-  } */
 }
 #home #main-nav .nav-links a {
   padding: 16px 24px;
+  transition: all 0.3s ease-in;
+}
+#home #main-nav .nav-links a:hover {
+  background-color: #FF9900;
 }
 
-/* .nav-links.active {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-} */
 .hero {
   height: 100vh;
   display: flex;
@@ -170,14 +178,13 @@ img {
 }
 #projects .certificate .cert-content .cert-box {
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  padding: 24px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   margin-bottom: 48px;
 }
 #projects .certificate .cert-content .cert-box .cert-description {
   text-align: left;
+  width: 50%;
+  padding: 24px;
 }
 #projects .certificate .cert-content .cert-box .cert-description h3 a {
   transition: all 0.1s ease-out;

@@ -87,48 +87,66 @@
     }
 
     .hero {
-            .hero-text {
-                h1 {
-                    font-size: variables.$font-size * 1.8;
-                }
-            }
-    
-            .btn {
-                &-primary {
-                    width: 100%;
-                    margin: 10px 0;
-                }
-    
-                &-secondary {
-                    width: 100%;
-                    margin: 10px 0;
-                }
-            }
-    
-            .skills {
-                h2 {
-                    text-align: center;
-                }
+        .hero-text {
+            h1 {
+                font-size: variables.$font-size * 1.8;
             }
         }
-    
-        #projects {
-            .prj-content {
-    
-                .prj-box {
-                    text-align: center;
-                    height: 100%;
+
+        .btn {
+            &-primary {
+                width: 100%;
+                margin: 10px 0;
+            }
+
+            &-secondary {
+                width: 100%;
+                margin: 10px 0;
+            }
+        }
+
+        .skills {
+            h2 {
+                text-align: center;
+            }
+        }
+    }
+
+    #projects {
+        .prj-content {
+
+            .prj-box {
+                text-align: center;
+                height: 100%;
+                flex-direction: column;
+                box-shadow: variables.$box-shadow-lg;
+
+                &:nth-child(2) {
                     flex-direction: column;
-                    box-shadow: variables.$box-shadow-lg;
-    
-                    &:nth-child(2) {
-                        flex-direction: column;
-    
-                        .prj-description {
-                            text-align: center;
-                        }
+
+                    .prj-description {
+                        text-align: center;
                     }
                 }
             }
         }
+        
+        .certificate {
+
+            .cert-content {
+
+                .cert-box {
+                    flex-direction: column;
+
+                    .cert-description {
+                        width: 100%;
+                    }
+
+                    .cert-img {
+                        max-width: 100%
+                    }
+                }
+            }       
+        }
+    }
 }

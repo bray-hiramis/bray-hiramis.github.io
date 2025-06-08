@@ -30,7 +30,7 @@ this.window.addEventListener('load', function() {
 
 // HANDLE WINDOW RESIZE STATE
 this.window.addEventListener('resize', function() {
-    if (this.window.innerWidth < 768) {
+    if (this.window.innerWidth <= 768) {
         hamburger.style.display = 'block';
         close.style.display = 'none';
     }

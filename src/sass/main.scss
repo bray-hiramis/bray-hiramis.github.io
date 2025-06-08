@@ -57,6 +57,11 @@ img {
             display: flex;
             a {
                 padding: variables.$padding-md variables.$padding-lg;
+                transition: all .3s ease-in;
+
+                &:hover {
+                    background-color: variables.$accent-color;
+                }
             }
         }
     }
@@ -142,14 +147,13 @@ img {
 
             .cert-box {
                 display: flex;
-                justify-content: space-between;
-                flex-wrap: wrap;
-                padding: variables.$padding-lg;
                 box-shadow: variables.$box-shadow-md;
                 margin-bottom: calc(variables.$margin-lg * 2);
 
                 .cert-description {
                     text-align: left;
+                    width: 50%;
+                    padding: variables.$padding-lg;
 
                     h3 {
                         a {

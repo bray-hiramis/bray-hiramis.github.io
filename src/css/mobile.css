@@ -91,6 +91,15 @@
   #projects .prj-content .prj-box:nth-child(2) .prj-description {
     text-align: center;
   }
+  #projects .certificate .cert-content .cert-box {
+    flex-direction: column;
+  }
+  #projects .certificate .cert-content .cert-box .cert-description {
+    width: 100%;
+  }
+  #projects .certificate .cert-content .cert-box .cert-img {
+    max-width: 100%;
+  }
 }
 
 /*# sourceMappingURL=mobile.css.map */
