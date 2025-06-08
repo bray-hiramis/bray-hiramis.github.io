@@ -16,11 +16,19 @@
         .hero-text {
             max-width: 100%;
             height: auto;
+
+            .skills {
+                margin: calc(variables.$margin-lg * 2) 0;
+            }
         }
 
         .hero-img {
             align-self: center;
         }
+    }
+
+    #projects {
+        margin-bottom: calc(variables.$margin-lg * 2);
     }
 }
 
@@ -38,10 +46,15 @@
     
             .nav-links {
                 display: none !important;
+                animation: slideIn .3s ease;
 
-                li {
-                    padding: 20px;
+                a {
+                    display: block;
+                    border-bottom: solid 2px variables.$text-color;
+                    li {
+                            padding: 20px;   }
                 }
+                
     
                 &.active {
                     display: block !important;
@@ -50,12 +63,27 @@
                     left: 0;
                     width: 100%;
                     text-align: center;
-                    max-height: none;
                     overflow: hidden;
                     background-color: variables.$accent-color;
                 }
             }   
         }
+    }
+
+    // for slide effect when opening the hamburger menu
+    @keyframes slideIn {
+        from {
+            transform: translateX(100%); // hides the element
+        }
+
+        to {
+            transform: translateX(0); // shows the element
+        }   
+    }
+
+    // used by window.load function so when the screen is in mobile, the navlinks are hidden
+    .hide {
+        display: none;   
     }
 
     .hero {
@@ -103,9 +131,4 @@
                 }
             }
         }
-}
-
-@media screen and (max-width: 576px) {
-
-    
 }

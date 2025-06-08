@@ -55,23 +55,12 @@ img {
 
         .nav-links {
             display: flex;
-            /* position: static; */
             a {
                 padding: variables.$padding-md variables.$padding-lg;
             }
-
-            /* &.active {
-                display: flex;
-            } */
         }
     }
 }
-
-/* .nav-links.active {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-} */
 
 // hero
 .hero {

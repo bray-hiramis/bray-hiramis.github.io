@@ -23,7 +23,8 @@ const navLinks = document.querySelector('.nav-links');
 // CHECKING THE LOAD STATE
 this.window.addEventListener('load', function() {
     if (this.window.innerWidth < 768) {
-        navLinks.classList.add('active');
+        navLinks.classList.toggle('hide');
+        // navLinks.classList.add('active');
     }
 });
 

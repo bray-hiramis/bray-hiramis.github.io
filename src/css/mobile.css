@@ -14,8 +14,14 @@
     max-width: 100%;
     height: auto;
   }
+  .hero .hero-text .skills {
+    margin: 48px 0;
+  }
   .hero .hero-img {
     align-self: center;
+  }
+  #projects {
+    margin-bottom: 48px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -29,8 +35,13 @@
   }
   #home #main-nav .nav-links {
     display: none !important;
+    animation: slideIn 0.3s ease;
   }
-  #home #main-nav .nav-links li {
+  #home #main-nav .nav-links a {
+    display: block;
+    border-bottom: solid 2px #222222;
+  }
+  #home #main-nav .nav-links a li {
     padding: 20px;
   }
   #home #main-nav .nav-links.active {
@@ -40,9 +51,19 @@
     left: 0;
     width: 100%;
     text-align: center;
-    max-height: none;
     overflow: hidden;
     background-color: #FF9900;
+  }
+  @keyframes slideIn {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  .hide {
+    display: none;
   }
   .hero .hero-text h1 {
     font-size: 28.8px;
